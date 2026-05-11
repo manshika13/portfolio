@@ -1,11 +1,32 @@
-<div align="center">
+# Manshika Garg | AI & ML Engineer Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A professional portfolio website showcasing expertise in Deep Learning, Generative AI, and Computer Vision.
 
-  <h1>Built with AI Studio</h2>
+## 🚀 Technologies
+- **Frontend**: React 19, Tailwind CSS 4, Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vite, Optimized for Cloud Run / GitHub Pages
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🛠️ Features
+- **Experience Timeline**: Detailed professional journey from CSIR-CEERI, Siemens, and Cisco.
+- **Project Gallery**: Deep dive into Transformer models, YOLOv8 implementations, and ML pipelines.
+- **Skill Toolkit**: Categorized view of programming languages (Python, C++), frameworks (PyTorch, TensorFlow), and cloud tools (AWS).
+- **Responsive UI**: Fully accessible on all device sizes with a modern dark-mode aesthetic.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 📦 Getting Started
 
-</div>
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## 📄 License
+This project is licensed under the Apache-2.0 License.
