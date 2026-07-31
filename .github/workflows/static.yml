@@ -1,0 +1,41 @@
+name: Node CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start dev server (Vite smoke test)
+        run: |
+          npm run dev -- --host 0.0.0.0 --port 5173 > dev.log 2>&1 &
+          DEV_PID=$!
+          sleep 12
+          if ps -p $DEV_PID > /dev/null; then
+            echo "Dev server started successfully"
+            kill $DEV_PID
+          else
+            echo "Dev server failed to stay running"
+            cat dev.log
+            exit 1
+          fi
+
+      - name: Production build
+        run: npm run build
